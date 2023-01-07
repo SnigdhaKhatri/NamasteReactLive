@@ -1,18 +1,21 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 
-//heading 1 and heading 2 and container are React elements => Object => HTML(DOM)
-const heading1 = React.createElement("h1", {}, "Heading 1 from React!");
-const heading2 = React.createElement("h2", {}, "Heading 2 from React!");
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading1, heading2]
-);
+const HeaderComponent = () => {
+  return (
+    <div className="navBar">
+      <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"></img>
+      <input type="text" placeholder="Search.." />
+      <img className="user" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"></img>
+    </div>
+  );
+}
 
-console.log(heading1);
+/*
+*To use react element inside component --- add it inside curly braces {}
+*To use react component inside componet --- add it as a tag or call it using curly braces 
+*
+* When you are using JSX -- add  curly braces and add any piece of JS code in it 
+*/
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+root.render(<HeaderComponent/>);
