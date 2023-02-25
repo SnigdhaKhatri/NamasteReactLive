@@ -36,3 +36,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.SearchBar {
+  padding: 10px;
+}
+
+.search-btn {
+  padding-left: 10px;
+}
